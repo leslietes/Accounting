@@ -1,0 +1,139 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background:transparent;
+	color:#555555;
+	font-size:12px;
+	font-weight:normal;
+	font-variant:normal;
+	font-style:normal;
+	line-height:1.6em;
+	font-family:Arial, Helvetica, sans-serif; 
+}
+
+ul li { list-style:none; }
+
+a { display:inline-block;text-decoration:none; }
+form { padding:10px; }
+
+.data, .actions { padding:10px; }
+.clear { clear:both;height:0;overflow:hidden; }
+
+/* login area */
+#pre_header_container {
+	background-color:#222;
+	margin-bottom:15px;
+	position:relative;
+	border:1px solid green;
+}
+
+#pre_header {
+	margin:0 auto;
+	text-align:right;
+	width:960px;
+}
+
+#pre_header ul.navigation {
+	float:right;
+	margin-bottom:5px;
+	margin-top:5px;
+	margin-right:0;
+}
+
+ul.navigation {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+ul.navigation li {
+	display: block;
+	float: left;
+}
+
+ul.navigation li a {
+	color: #eee;
+	padding: 0 5px;
+}
+
+.container {
+	width: 960px; 
+	border: 1px solid #c1c1c1;
+	margin: auto;
+	float: none;
+	background: #fff;
+}
+
+#header {
+	background-color: #4c7ccf;
+	color: #eee;
+	height: 75px;
+	z-index:5;
+}
+
+#logo {
+	font-size:24px;
+	font-weight:normal;
+	width:560px;
+	line-height:1.4em;
+	overflow:hidden;
+	padding-left:10px;	
+	padding-top:10px;
+}
+
+#navigation {
+	margin-top:10px;
+	padding-left:10px;
+}
+
+#navigation ul li a {
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+}
+
+#navigation ul li a:active {
+	font-weight: bold;	
+}
+
+#navigation ul li a:hover {
+	background-color:#E0ECFF;
+	color:#4C7CCF;
+}
+
+#navigation ul li ul {
+	display: none;
+}
+
+#main {
+	padding:10px;
+}
+
+#panel1 {
+	border:1px solid #dedede;
+	width:250px;
+	float:left;
+}
+
+#panel2 {
+	border:1px solid #dedede;
+	width:670px;
+	float:right;
+}
+
+#panel1 h3, #panel2 h3 {
+	border-bottom:1px solid #dedede;
+	padding:0 10px;
+}
+
+#panel1 ul { padding:10px; }

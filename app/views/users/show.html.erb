@@ -1,0 +1,20 @@
+<%= render 'users/list' %>
+
+<div id="panel2">
+	<h3>&nbsp;</h3>
+	
+	<div class="data">
+		<%= label_tag :username %>
+		<%= @user.login %>
+	</div>
+	
+	<%= render 'users/form' %>
+	
+	<div class="actions">
+		<%= link_to 'Edit', edit_user_path(@user) %>
+		<%= link_to 'Delete' %>
+	</div>
+	
+</div>	
+
+<div class="clear"></div>

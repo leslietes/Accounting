@@ -1,0 +1,13 @@
+<div id="panel1">
+  <h3>Users</h3>
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= link_to user.login, user_path(user) %></li>
+    <% end %>
+  </ul>
+  
+  <div class="actions">
+  	<%#= link_to_function 'print', 'javascript:print()' %>
+  	<%= link_to 'Print', users_path(:format => "pdf") %>	
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<% if logged_in? %>
+<div id="navigation">
+				<ul class="navigation">
+					<li><%= link_to 'Menu 1', accounts_url %>
+						<ul>
+					    	<li><%= link_to 'Sub-menu 1' %></li>
+					    </ul>
+					</li>
+					<li><%= link_to 'Users', users_url %></li>
+				</ul>	
+			</div>
+<% end %>			

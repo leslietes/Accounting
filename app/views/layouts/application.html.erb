@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "jquery-1.4.2.min.js", "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="pre_header_container">
+		<%= render :partial => "users/user_bar" %>
+	</div>
+		
+	<div class="container">
+		<div id="header">
+			<div id="logo">
+				Test
+			</div>
+			<%= render 'shared/menu' %>
+		</div>
+		<div class="clear"></div>
+		<div id="main">
+			<%= yield %>	
+		</div>
+	</div>
+</body>
+</html>
