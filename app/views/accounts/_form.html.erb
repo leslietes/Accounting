@@ -1,6 +1,6 @@
 <%= form_for @account do |f| %>
   <% if @account.errors.any? %>
-    <div id="error_explanation">
+    <div class="errors">
     	<h2><%= pluralize(@account.errors.count, "error") %> prohibited this entry from being saved:</h2>
 		<ul>
 			<% @account.errors.full_messages.each do |msg| %>

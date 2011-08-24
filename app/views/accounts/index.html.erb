@@ -1,13 +1,28 @@
-<h1>Accounts</h1>
-
-<ul>
-	<% @accounts.each do |account| %>
-	<li>
-		<%= account.name %> - <%= account._type %>
-		<%= link_to 'Edit', edit_account_path(account) %>
-		<%= link_to 'Delete', account_path(account), :method => :delete, :confirm => "Are you sure?" %>
-	</li>
-	<% end %>
-</ul>	
-
-<%= link_to 'New', new_account_url %>
+<div id="panel1">
+	<h3>Accounts<span><%= link_to '+ New Account', new_account_path %></span></h3>
+	<div class="data">
+		<table id="accounts">
+			<thead>
+				<tr>
+					<th>Account Name</th>
+					<th>Account Type</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @accounts.each do |account| %>
+					<tr>
+						<td><%= account.name %></td>
+						<td class="center"><%= account._type %></td>
+						<td class="center">
+							<%= link_to 'Edit', edit_account_path(account) %>
+							<%= link_to 'Delete', account_path(account), :method => :delete, :confirm => "Are you sure?" %>					
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+<div class="clear"></div>

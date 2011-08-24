@@ -1,9 +1,12 @@
 <% if @user.errors.any? %>
-  <ul class="errors">
+ <div class="errors">
+ 	<h2><%= pluralize(@user.errors.count, "error") %> prohibited this entry from being saved:</h2>
+  <ul>
   	<% @user.errors.full_messages.each do |msg| %>
 	  <li><%= msg %></li>
 	<% end %>  
   </ul>
+  </div>
 <% end %>
 
 <%= form_for @user do |f| -%>
@@ -28,5 +31,5 @@
 <p><%= label_tag 'password_confirmation', 'Confirm Password' %>
 <%= f.password_field :password_confirmation %></p>
 
-<p><%= submit_tag %></p>
+<p><%= submit_tag %>&nbsp;&nbsp;&nbsp;<%= link_to 'Cancel', users_path %></p>
 <% end -%>
