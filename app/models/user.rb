@@ -18,10 +18,8 @@ class User < ActiveRecord::Base
                     :length     => { :maximum => 100 },
                     :allow_nil  => true
 
-#  validates :email, :presence   => true,
-#                    :uniqueness => true,
-#                    :format     => { :with => Authentication.email_regex, :message => Authentication.bad_email_message },
-#                    :length     => { :within => 6..100 }
+  #validates :email, :format     => { :with => Authentication.email_regex, :message => Authentication.bad_email_message },
+  #                  :length     => { :within => 6..100 }
 
   # roles - admin, normal
   validates_presence_of :role, :default => 'normal'

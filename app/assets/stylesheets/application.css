@@ -23,8 +23,13 @@ body {
 }
 
 ul li { list-style:none; }
-
 a { display:inline-block;text-decoration:none; }
+form { padding:10px; }
+form p { padding:0.5em 0; }
+label { width:110px;float:left;text-align:right;font-weight:bold;padding-right:10px; }
+input { width:250px; }
+input[type='submit'] { padding:5px;margin:10px 0;color:#eee;border-radius:5px;background-color:#4C7CCF;font-weight:bold; }
+textarea { height:100px;width:250px; }
 
 .errors { margin:10px;padding:10px;width:450px;border: 2px solid red;background-color: #f0f0f0; }
 .errors h2 { padding-bottom:5px; }
@@ -32,12 +37,9 @@ ul.errors li { font-size:12px;list-style:square inside none; }
 .field_with_errors input { padding:0px;background-color:red; }
  
 #login_form form label { text-align:left; }  
-  
-form { padding:10px; }
-form p { padding:0.5em 0; }
-label { width:110px;float:left;text-align:right;font-weight:bold;padding-right:10px; }
-input[type='submit'] { padding:5px;margin:10px 0;color:#eee;border-radius:5px;background-color:#4C7CCF;font-weight:bold; }
 
+.notice { background-color:#E0ECFF;padding:10px;margin:10px 0; }
+.alert  { background-color:#FFCCCC;padding:10px;margin:10px 0; }
 .data, .actions { padding:10px; }
 .clear { clear:both;height:0;overflow:hidden; }
 .center { text-align:center;}
