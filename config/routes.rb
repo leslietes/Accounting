@@ -2,6 +2,7 @@ Accounting::Application.routes.draw do
 
   resources :users
   resources :accounts
+  resources :payees
 
   resource :session, :only => [:new, :create, :destroy]
 

@@ -1,0 +1,32 @@
+<div id="panel1">
+	<h3>Payees<span><%= link_to '+ New Payee', new_payee_path%></span></h3>
+	<div class="data">
+		<table id="payees">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Other Name</th>
+					<th>Tel No</th>
+					<th>Contact Person</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @payees.each do |p| %>
+					<tr>
+						<td><%= p.name %></td>
+						<td><%= p.other_name %></td>
+						<td><%= p.telnum %></td>
+						<td><%= p.contact %></td>
+						<td class="center">
+							<%= link_to 'Edit', edit_payee_path(p) %>
+							<%= link_to 'Delete', payee_path(p), :method => :delete, :confirm => "Are you sure?" %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="clear"></div>	

@@ -1,0 +1,40 @@
+<%= form_for @payee do |f| %>
+  <% if @payee.errors.any? %>
+    <div class="errors">
+    	<h2><%= pluralize(@payee.errors.count, "error") %> prohibited this entry from being saved:</h2>
+		<ul>
+			<% @payee.errors.full_messages.each do |msg| %>
+			  <li><%= msg %></li>
+			<% end %>
+		</ul>
+    </div>	
+  <% end %>
+  
+  <div class="field">
+  	<%= f.label :name %>
+	<%= f.text_field :name %>
+  </div>	
+  
+  <div class="field">
+  	<%= f.label :other_name %>
+	<%= f.text_field :other_name %>
+  </div>
+
+  <div class="field">
+  	<%= f.label :tel_no %>
+	<%= f.text_field :telnum %>
+  </div>
+
+  <div class="field">
+  	<%= f.label :contact_person %>
+	<%= f.text_field :contact %>
+  </div>
+  
+  <div class="field">
+  	<%= f.label :remarks %>
+	<%= f.text_area :remarks %>
+  </div>
+  <div class="actions">
+  	<%= f.submit %>&nbsp;&nbsp;&nbsp;<%= link_to 'Cancel', payees_path %>
+  </div>	  
+<% end %>
