@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Test</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "jquery-1.4.2.min.js", "application" %>
+  <%= stylesheet_link_tag "superfish", "application" %>
+  <%= javascript_include_tag "jquery-1.4.2.min.js", "superfish.js", "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,8 +20,12 @@
 		</div>
 		<div class="clear"></div>
 		<div id="main">
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
+			<% if notice %>
+			  <p class="notice"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+			  <p class="alert"><%= alert %></p>
+			<% end %>  
 			<%= yield %>	
 		</div>
 	</div>

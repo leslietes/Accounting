@@ -9,12 +9,5 @@
 //= require_tree .
 
 $(document).ready(function() {
-	
-	$('#navigation ul li').hover(
-		function() {
-			$('#navigation ul li > ul').show();			
-		}, 
-		function() {
-			$('#navigation ul li > ul').hide();	
-		});
+	$('ul.sf-menu').superfish();
 })
