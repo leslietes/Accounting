@@ -31,10 +31,15 @@
   </div>
   
   <div class="field">
+  	<%= f.label :active %>
+	<%= f.check_box :active %>
+  </div>	
+  
+  <div class="field">
   	<%= f.label :remarks %>
 	<%= f.text_area :remarks %>
   </div>
   <div class="actions">
-  	<%= f.submit %>&nbsp;&nbsp;&nbsp;<%= link_to 'Cancel', payees_path %>
+  	<%= f.submit 'Save' %>&nbsp;&nbsp;&nbsp;<%= link_to 'Cancel', payees_path %>
   </div>	  
 <% end %>

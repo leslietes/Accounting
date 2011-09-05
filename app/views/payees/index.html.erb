@@ -18,7 +18,7 @@
 						<td><%= p.other_name %></td>
 						<td><%= p.telnum %></td>
 						<td><%= p.contact %></td>
-						<td class="center">
+						<td id="actions">
 							<%= link_to 'Edit', edit_payee_path(p) %>
 							<%= link_to 'Delete', payee_path(p), :method => :delete, :confirm => "Are you sure?" %>
 						</td>
