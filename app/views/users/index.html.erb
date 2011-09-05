@@ -18,7 +18,7 @@
 					<td class="center"><%= user.login %></td>
 					<td class="center"><%= user.email %></td>
 					<td class="center"><%= user.role  %></td>
-					<td class="center">
+					<td id="actions">
 						<%= link_to 'Edit', edit_user_path(user) %>
 						<%= link_to 'Delete', user_path(user), :method => :delete, :confirm => "Are you sure?" %>
 					</td>
