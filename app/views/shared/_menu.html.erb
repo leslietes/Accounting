@@ -1,13 +1,20 @@
 <% if logged_in? %>
-<div id="navigation">
-				<ul class="navigation">
-					<li><%= link_to 'Maintenance' %>
-						<ul>
-					    	<li><%= link_to 'Accounts', accounts_url %></li>
-					    </ul>
-					</li>
-					<li><%= link_to 'Payees', payees_url %></li>
-					<li><%= link_to 'Users', users_url %></li>
-				</ul>	
-			</div>
+<div>
+	<ul class="sf-menu">
+		<li><%= link_to 'Maintenance', accounts_url %>
+			<ul>
+				<li><%= link_to 'Chart of Accounts', accounts_url %></li>
+				<li><%= link_to 'Payees', payees_url %></li>
+				<li><%= link_to 'Departments', departments_url %></li>
+			</ul>
+		</li>
+		<li><%= link_to 'Transactions' %>
+			<ul>
+				<li><%= link_to 'Request Payment' %></li>
+				<li><%= link_to 'Release Payment' %></li>
+			</ul>
+		</li>
+		<li></li>
+	</ul>	
+</div>
 <% end %>			

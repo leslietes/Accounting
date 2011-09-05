@@ -1,0 +1,33 @@
+<div id="panel1">
+	<h3>Departments<span><%= link_to '+ New Department', new_department_path%></span></h3>
+	<div class="data">
+		<table>
+			<thead>
+				<tr>
+					<th>Department Name</th>
+					<th>Subdepartments</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @departments.each do |d| %>
+				    <tr>
+				    	<td><%= d.name %></td>
+						<td>
+							<% d.subdepartments.each do |s| %>
+								<%= s.name %><br/>
+							<% end %>
+						</td>
+						<td id="actions">
+							<%= link_to 'Show', department_url(d) %>
+							<%= link_to 'Edit', edit_department_path(d) %>
+							<%= link_to 'Delete', d, :method => :delete, :confirm => 'Are you sure?' %>
+						</td>
+				    </tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>	
+
+<div class="clear"></div>

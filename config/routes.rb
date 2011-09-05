@@ -3,6 +3,9 @@ Accounting::Application.routes.draw do
   resources :users
   resources :accounts
   resources :payees
+  resources :departments do
+    resources :subdepartment
+  end
 
   resource :session, :only => [:new, :create, :destroy]
 

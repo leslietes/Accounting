@@ -1,0 +1,21 @@
+<%= form_for @department do |f| %>
+  <% if @department.errors.any? %>
+    <div class="errors">
+      <h2><%= pluralize(@department.errors.count, "error")%> prohibited this entry from being saved:</h2>
+        <ul>
+          <% @department.errors.full_messages.each do |d| %>
+		    <li><%= msg %></li>
+		  <% end %>
+        </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+  	<%= f.label :name %>
+	<%= f.text_field :name %>
+  </div>
+  
+  <div class="actions">
+  	<%= f.submit 'Save' %>&nbsp;&nbsp;&nbsp;<%= link_to 'Cancel', departments_path %>
+  </div>
+<% end %>

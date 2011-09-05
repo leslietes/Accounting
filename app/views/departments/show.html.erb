@@ -1,0 +1,25 @@
+<div id="panel1">
+	<h3><%= @department.name %></h3>
+	<div class="data">
+	<%= form_for @subdepartment, :url => department_subdepartment_index_path(params[:id]) do |f|%>
+	<label>Name:</label><%= f.text_field :name %>
+	<%= f.submit 'Add' %>
+	
+	<br/>
+	
+	<label>Subdepartments:</label>
+	<br/>
+	
+	<ul>
+		<% @subdepartments.each do |s| %>
+		<li><label>&nbsp;</label><span style="width:100px;"><%= s.name %></span>&nbsp;<%= link_to 'Delete', department_subdepartment_url(@department,s). :method => :delete, :confirm => 'Are you sure?' %></li>
+		<% end %>
+	</ul>
+	
+	<br/>
+	
+	<% end %>
+	</div>
+	<%= link_to 'Back', departments_url, :class => 'actions' %>
+</div>
+<div class="clear"></div>
